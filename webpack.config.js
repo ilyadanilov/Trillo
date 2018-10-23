@@ -2,7 +2,7 @@
 
 
 
-// const CopyWebpackPlugin = require('copy-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
@@ -41,17 +41,17 @@ module.exports = {
   },
   plugins: [
     
-    // new CopyWebpackPlugin([
-    //   {
-    //     from: './src/img',
-    //     to: './img'
-    //   },
+    new CopyWebpackPlugin([
+      {
+        from: './src/img',
+        to: './img'
+      // },
     //   {
     //     from: './src/css',
     //     to: './css'
-    //   }
+      }
       
-    // ]),
+    ]),
   
     new HtmlWebpackPlugin({
       inject: false,
